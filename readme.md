@@ -22,4 +22,7 @@ Replay 1: https://app.studi.fr/v3/events/77793/stream?type=0
 
 ## Instructions  
 
-Cliquez sur les liens pour accéder à chaque live à la date et l'heure indiquées.  
+Cliquez sur les liens pour accéder à chaque live à la date et l'heure indiquées.   
+
+# Images 
+https://freepik.com/auteur/stories
