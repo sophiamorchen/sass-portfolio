@@ -1,8 +1,22 @@
+// Définition des couleurs sous forme de variables
+
 $primary: #55198B;
 $secondary: #aaa5ff;
+$accent: #fec131;
 $grey:#868e96;
 $dark: #171c28;
 $white: #ffffff;
 $light-grey: #f3efef;
+
+// Création d'une "map" contenant les noms et valeurs des couleurs
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "grey": $grey,
+    "light-grey": $light-grey,
+    "dark": $dark,
+    "white": $white,
+    "accent": $accent,
+);
 
 

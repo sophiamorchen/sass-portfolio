@@ -1,0 +1,45 @@
+// Fonction pour assombrir la couleur de la bordure
+@function darkenBorder($color) {
+    @return darken($color, 20%);
+  }
+  
+  // Fonction pour déterminer la couleur du texte (noir ou blanc)
+  @function getFontColor($bgColor) {
+    @if(lightness($bgColor) > 50%) {
+      @return $dark;  // Texte noir pour fond clair
+    } @else {
+      @return $white; // Texte blanc pour fond sombre
+    }
+  }
+  
+  .btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border: solid 1px;
+    transition: all ease 0.3s;
+  
+    &:hover {
+      transform: translateY(-10px);
+    }
+  
+    // Boucle pour générer automatiquement les classes de boutons
+    @each $name, $color in $colors {
+      // Création dynamique de la classe .btn-[nom_de_la_couleur]
+      &.btn-#{$name} {
+        background-color: $color; // Fond du bouton avec la couleur correspondante
+        border-color: darkenBorder($color); // Utilisation de la fonction pour assombrir la couleur
+        color: getFontColor($color); // Texte en couleur sombre pour un bon contraste
+  
+        &:hover {
+          $bg-hover: lighten($color, 50%);
+          background-color: $bg-hover; // Fond du bouton devient plus clair
+          color: getFontColor($bg-hover); // Texte prend la couleur d'origine du bouton
+        }
+      }
+    }
+  }
+  
+  // Exemple d'utilisation
