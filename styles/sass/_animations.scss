@@ -1,0 +1,29 @@
+
+.animate-fusee {  
+    transition: all 1s ease; /* Décommente si tu veux un retour en douceur */  
+    display: inline-block;  
+    &:hover {  
+        animation: moveFusee 1s; /* Animation plus rapide */  
+    }  
+}  
+
+@keyframes moveFusee {  
+    @for $i from 0 through 7 {  
+        #{($i * 10)}% {  
+            transform: translate(  
+                if($i % 2 == 0, -1px * $i, 1px * $i),  
+                if($i % 2 == 0, 1px * $i, -1px * $i)  
+            );  
+        }  
+    }  
+
+    /* Option 1: Décollage progressif et contrôlé */  
+    70% { transform: translateY(-10px); } /* Léger tremblement avant le décollage */  
+    100% { transform: translateY(-200px) translateX(50px); } /* Décollage vers le haut et la droite */  
+
+
+    /* Option 2: Décollage rapide et hors de l'écran (à utiliser avec prudence) */  
+    /*100% {  
+        transform: translate(15000px, -15000px);  
+    }*/  
+}  
