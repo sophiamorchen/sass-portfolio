@@ -34,7 +34,7 @@
         color: getFontColor($color); // Texte en couleur sombre pour un bon contraste
   
         &:hover {
-          $bg-hover: lighten($color, 50%);
+          $bg-hover: lighten($color, 10%);
           background-color: $bg-hover; // Fond du bouton devient plus clair
           color: getFontColor($bg-hover); // Texte prend la couleur d'origine du bouton
         }
