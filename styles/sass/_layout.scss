@@ -1,15 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: $dark;
     color: $white;
-    margin: 0 30px;
+    @media screen and (min-width: 768px) {
+        margin: 0 30px;
+    }
+    margin: 0 20px;
 }
 main {
-    margin: 0 30px; 
+    @media screen and (min-width: 768px) {
+        margin: 0 30px;
+    }
+
 }
-header.header-website {
-    height: 75px;
-    margin-bottom: 15px;
-}
+
 picture.emoji-gif {
     img {
     width: 1em;

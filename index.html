@@ -16,11 +16,32 @@
     <link rel="stylesheet" href="./styles/css/main.css">
 </head>
     <body>
+        <!--  stylisation de la nav-bar -->
         <header class="header-website">
-            HEADER
+            <nav class="navbar">
+                <div class="logo">
+                    <!-- <img src="./img/logo.png" alt="Logo Sophia Morchen"> -->
+                    <span class="logo-text">Sophia morchen</span>
+                </div>
+                <div class="menu">
+                    <label class="btn btn-secondary menu-input-label" for="menu-toggle"><i class="fa-solid fa-bars"></i>
+                    </label>
+                    <input type="checkbox" id="menu-toggle" class="menu-input">
+                    <div class="dropdown-menu">
+                        <ul class="nav-links">
+                            <li class="nav-link">
+                                <a href="#accueil">Accueil</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#competences">Compétences</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
         <main>
-        <section class="section-display left-text-content">
+        <section class="section-display left-text-content" id="accueil">
             <article class="text-content">
                 <h1 class="title">
                     Sophia Morchen 
@@ -53,61 +74,7 @@
                 <img src="./img/presentation.png" alt="Présentation de Sophia Morchen">
             </div>
         </section>
-        <section class="section-display right-text-content">
-            <article class="text-content">
-                <h2 class="title">Mes compétences</h2>
-                <p class="paragraph">Voici lé compétences que je maitrise :  🚀</p>
-                <div class="competences-icons">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3"></i>
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-node"></i>
-                        <!-- icones de compétence -->
-                </div>
-                
-            </article>
-            <div class="illustration">
-                <img src="./img/competences.png" alt="Présentation de Sophia Morchen">
-            </div>
-        </section>
-        <section class="section-display left-text-content">
-            <article class="text-content">
-                <h2 class="title">Mes compétences</h2>
-                <p class="paragraph">Voici lé compétences que je maitrise :</p>
-                <div class="competences-icons">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3"></i>
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-node"></i>
-                        <!-- icones de compétence -->
-                </div>
-                
-            </article>
-            <div class="illustration">
-                <img src="./img/competences.png" alt="Présentation de Sophia Morchen">
-            </div>
-        </section>
-        <section class="section-display right-text-content">
-            <article class="text-content">
-                <h2 class="title">Mes compétences</h2>
-                <p class="paragraph">Voici lé compétences que je maitrise :  🚀</p>
-                <div class="competences-icons">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3"></i>
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-node"></i>
-                        <!-- icones de compétence -->
-                </div>
-                
-            </article>
-            <div class="illustration">
-                <img src="./img/competences.png" alt="Présentation de Sophia Morchen">
-            </div>
-        </section>
-        <section class="section-display -text-content">
+        <section class="section-display right-text-content" id="competences">
             <article class="text-content">
                 <h2 class="title">Mes compétences</h2>
                 <p class="paragraph">Voici lé compétences que je maitrise :  🚀</p>
