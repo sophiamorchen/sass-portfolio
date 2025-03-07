@@ -34,7 +34,7 @@
                 @media screen and (min-width: 768px) {
                     font-size: 30px;
 
-                line-height: 40px;
+                line-height: px-to-rem(40px);
                 }
             }
         }
