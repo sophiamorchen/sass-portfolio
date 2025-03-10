@@ -67,7 +67,7 @@ picture.emoji-gif img {
 @media screen and (min-width: 768px) {
   .section-display .text-content .paragraph {
     font-size: 30px;
-    line-height: 40px;
+    line-height: px-to-rem(40px);
   }
 }
 .section-display .illustration {
@@ -93,6 +93,28 @@ picture.emoji-gif img {
   cursor: pointer;
   color: #aaa5ff;
   transform: scale(1.2);
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #171c28; /* change  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: loader-hide 1s forwards;
+}
+#loader .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #55198B;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
 .btn {
@@ -210,17 +232,38 @@ picture.emoji-gif img {
   70% {
     transform: translate(7px, -7px);
   }
-  /* Option 1: Décollage progressif et contrôlé */
-  70% {
-    transform: translateY(-10px);
-  } /* Léger tremblement avant le décollage */
   100% {
-    transform: translateY(-200px) translateX(50px);
-  } /* Décollage vers le haut et la droite */
+    transform: translate(1500px, -1500px);
+  }
+  /* Option 1: Décollage progressif et contrôlé */
   /* Option 2: Décollage rapide et hors de l'écran (à utiliser avec prudence) */
   /*100% {  
       transform: translate(15000px, -15000px);  
   }*/
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-hide {
+  /* Opacité à 1 car par défaut */
+  80% {
+    opacity: 1; /* Valeur poar défaut */
+    transform: scale(1);
+  }
+  99% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  100% {
+    display: none; /* opacité à zero, on l'a dit avec le "zero", oui, mais "encore clicable" permet de "vraiment le masquer" */
+    opacity: 0;
+    transform: scale(10);
+  }
 }
 .header-website {
   position: sticky;

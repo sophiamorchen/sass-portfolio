@@ -16,10 +16,13 @@
             );  
         }  
     }  
+    100% {  
+        transform: translate(1500px, -1500px);  
+    }
 
     /* Option 1: Décollage progressif et contrôlé */  
-    70% { transform: translateY(-10px); } /* Léger tremblement avant le décollage */  
-    100% { transform: translateY(-200px) translateX(50px); } /* Décollage vers le haut et la droite */  
+    // 70% { transform: translateY(-10px); } /* Léger tremblement avant le décollage */  
+    // 100% { transform: translateY(-200px) translateX(50px); } /* Décollage vers le haut et la droite */  
 
 
     /* Option 2: Décollage rapide et hors de l'écran (à utiliser avec prudence) */  
@@ -27,3 +30,31 @@
         transform: translate(15000px, -15000px);  
     }*/  
 }  
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes loader-hide {
+    0% {
+    }                  /* Opacité à 1 car par défaut */
+    80% {
+        opacity: 1;  /* Valeur poar défaut */
+        transform: scale(1);
+    }
+    99% {
+        opacity: 0;
+        transform: scale(10);
+    }
+    100% {
+        display: none;  /* opacité à zero, on l'a dit avec le "zero", oui, mais "encore clicable" permet de "vraiment le masquer" */
+        opacity: 0;
+        transform: scale(10);
+    }
+
+}
