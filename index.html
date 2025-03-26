@@ -1,109 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Sophia Morchen, développeuse web et mobile">
-    <meta name="keywords" content="portfolio, Sophia Morchen, développeuse web, développeuse mobile">
-    <meta name="author" content="Sophia Morchen">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Sophia Morchen, développeuse web et mobile"
+    />
+    <meta
+      name="keywords"
+      content="portfolio, Sophia Morchen, développeuse web, développeuse mobile"
+    />
+    <meta name="author" content="Sophia Morchen" />
+
     <title>Portfolio Sophia M</title>
     <!-- font awesome link -->
-    <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- end font awesome -->
 
-    <link rel="stylesheet" href="./styles/css/main.css">
-</head>
-    <body>
-        <!--  stylisation de la nav-bar -->
-        <header class="header-website">
-            <nav class="navbar">
-                <div class="logo">
-                    <!-- <img src="./img/logo.png" alt="Logo Sophia Morchen"> -->
-                    <span class="logo-text">Sophia morchen</span>
-                </div>
-                <div class="menu">
-                    <label class="btn btn-secondary menu-input-label" for="menu-toggle"><i class="fa-solid fa-bars"></i>
-                    </label>
-                    <input type="checkbox" id="menu-toggle" class="menu-input">
-                    <div class="dropdown-menu">
-                        <ul class="nav-links">
-                            <li class="nav-link">
-                                <a href="#accueil">Accueil</a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#competences">Compétences</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-        <section class="section-display left-text-content" id="accueil">
-            <article class="text-content">
-                <h1 class="title">
-                    Sophia Morchen 
-                    <picture class="emoji-gif">
-                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/270c_fe0f/512.webp" type="image/webp">
-                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/270c_fe0f/512.gif" alt="✌">
-                    </picture>
-                </h1>
-                <p class="paragraph">A passionate Full Stack Software Developer 
-                    <span class="animate-fusee">
-                        <picture class="emoji-gif">
-                            <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp" type="image/webp">
-                            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" width="32" height="32">
-                        </picture>
-                    </span>
-                        having an experience of building Web and Mobile 
-                        applications with JavaScript / Reactjs / Nodejs / React 
-                        Native and some other cool libraries and frameworks.
-                </p>
-                <div class="socials">
-                        <!-- social icons -->
-                </div>
-                <div class="action-div">
-                    <button class="btn btn-primary">Contact</button>
-                    <button class="btn btn-primary">Mon CV</button>
-                </div>
-                
-            </article>
-            <div class="illustration">
-                <img src="./img/presentation.png" alt="Présentation de Sophia Morchen">
-            </div>
-        </section>
-        <section class="section-display right-text-content" id="competences">
-            <article class="text-content">
-                <h2 class="title">Mes compétences</h2>
-                <p class="paragraph">Voici lé compétences que je maitrise :  🚀</p>
-                <div class="competences-icons">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3"></i>
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-node"></i>
-                        <!-- icones de compétence -->
-                </div>
-                
-            </article>
-            <div class="illustration">
-                <img src="./img/competences.png" alt="Présentation de Sophia Morchen">
-            </div>
-        </section>
-    </main>
-    <footer>
-        FOOTER
-    </footer>
-    <div id="loader">
-        <div class="loader">
+    <link rel="stylesheet" href="./styles/css/main.css" />
+  </head>
+  <body>
+    <!--  stylisation de la nav-bar -->
+    <header class="header-website">
+      <nav class="navbar">
+        <div class="logo">
+          <!-- <img src="./img/logo.png" alt="Logo Sophia Morchen"> -->
+          <span class="logo-text">Sophia morchen</span>
         </div>
+        <div class="menu">
+          <label class="btn btn-secondary menu-input-label" for="menu-toggle"
+            ><i class="fa-solid fa-bars"></i>
+          </label>
+          <input type="checkbox" id="menu-toggle" class="menu-input" />
+          <div class="dropdown-menu">
+            <ul class="nav-links">
+              <li class="nav-link">
+                <a href="#accueil">Accueil</a>
+              </li>
+              <li class="nav-link">
+                <a href="#competences">Compétences</a>
+              </li>
+              <li class="nav-link">
+                <a href="#blog">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-display left-text-content" id="accueil">
+        <article class="text-content">
+          <h1 class="title">
+            Sophia Morchen
+            <picture class="emoji-gif">
+              <source
+                srcset="
+                  https://fonts.gstatic.com/s/e/notoemoji/latest/270c_fe0f/512.webp
+                "
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/270c_fe0f/512.gif"
+                alt="✌"
+              />
+            </picture>
+          </h1>
+          <p class="paragraph">
+            A passionate Full Stack Software Developer
+            <span class="animate-fusee">
+              <picture class="emoji-gif">
+                <source
+                  srcset="
+                    https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif"
+                  alt="🚀"
+                  width="32"
+                  height="32"
+                />
+              </picture>
+            </span>
+            having an experience of building Web and Mobile applications with
+            JavaScript / Reactjs / Nodejs / React Native and some other cool
+            libraries and frameworks.
+          </p>
+          <div class="socials">
+            <!-- social icons -->
+          </div>
+          <div class="action-div">
+            <button class="btn btn-primary">Contact</button>
+            <button class="btn btn-primary">Mon CV</button>
+          </div>
+        </article>
+        <div class="illustration">
+          <img
+            src="./img/presentation.png"
+            alt="Présentation de Sophia Morchen"
+          />
+        </div>
+      </section>
+      <section class="section-display right-text-content" id="stack-technique">
+        <article class="text-content">
+          <h2 class="title">Stack technique</h2>
+          <p class="paragraph">
+            Voici les technologies que j'utilise au quotidien :
+          </p>
+          <div class="stack-technique-icons">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3"></i>
+            <i class="fa-brands fa-bootstrap"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-node"></i>
+            <!-- icones de compétence -->
+          </div>
+        </article>
+        <div class="illustration">
+          <img src="./img/stack.png" alt="Présentation de Sophia Morchen" />
+        </div>
+      </section>
+      <section class="section-display left-text-content" id="competences">
+        <article class="text-content">
+          <h2 class="title">Mes compétences</h2>
+          <p class="paragraph">Voici les compétences que je maitrise :</p>
+          <div class="competences-bars">
+            <div class="competence-bar">
+              <div class="competence-bar-title">HTML
+                <div class="competence-bar-bar">
+                  <div class="competence-bar-bar-fill" style="width: 90%"></div>
+                </div>
+            </div>
+          </div>
+            <div class="competence-bar">
+              <div class="competence-bar-title">CSS
+                <div class="competence-bar-bar">
+                  <div class="competence-bar-bar-fill" style="width: 80%"></div>
+                </div>
+            </div>
+          </div>
+            <div class="competence-bar">
+              <div class="competence-bar-title">JS
+                <div class="competence-bar-bar">
+                  <div class="competence-bar-bar-fill" style="width: 70%"></div>
+                </div>
+            </div>
+          </div>
+            <div class="competence-bar">
+              <div class="competence-bar-title">VUE
+                <div class="competence-bar-bar">
+                  <div class="competence-bar-bar-fill" style="width: 60%"></div>
+                </div>
+            </div>
+          </div>
+        </article>
+        <div class="illustration">
+          <img
+            src="./img/competences.png"
+            alt="Présentation de Sophia Morchen"
+          />
+        </div>
+      </section>
 
+      <section class="section-display full-text-content" id="blog">
+        <div class="text-content">
+          <h2 class="title">Blog</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            repellendus harum quo voluptates quam adipisci, atque error,
+            consequuntur enim tenetur temporibus ipsum ex tempore doloremque.
+            Eum incidunt quo tempore earum!
+          </p>
+          <section class="list-blog">
+            <a href="https://google.com">
+              <article class="blog">
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  repellendus harum quo voluptates quam adipisci, atque error,
+                  consequuntur enim tenetur temporibus ipsum ex tempore
+                  doloremque. Eum incidunt quo tempore earum!
+                </p>
+                <div class="link-blog" href="google.com">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </article>
+            </a>
+
+            <article class="blog">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                repellendus harum quo voluptates quam adipisci, atque error,
+                consequuntur enim tenetur temporibus ipsum ex tempore
+                doloremque. Eum incidunt quo tempore earum!
+              </p>
+              <a class="link-blog" href="google.com"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>FOOTER</footer>
+    <div id="loader">
+      <div class="loader"></div>
     </div>
-</body>
+  </body>
 </html>

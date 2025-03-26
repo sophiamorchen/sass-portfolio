@@ -80,19 +80,63 @@ picture.emoji-gif img {
   margin: auto;
 }
 
-.competences-icons {
+.stack-technique-icons {
   display: flex;
   justify-content: center;
   gap: 30px;
   font-size: 45px;
 }
-.competences-icons i {
+.stack-technique-icons i {
   transition: all 0.3s ease;
 }
-.competences-icons i:hover {
+.stack-technique-icons i:hover {
   cursor: pointer;
   color: #aaa5ff;
   transform: scale(1.2);
+}
+
+.list-blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+.list-blog a {
+  text-decoration: none;
+  color: white;
+}
+.list-blog .blog {
+  box-shadow: 1px 0 20px #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  position: relative;
+}
+.list-blog .blog h4, .list-blog .blog p {
+  position: relative;
+  z-index: 6;
+  background-color: transparent;
+}
+.list-blog .blog:hover {
+  cursor: pointer;
+}
+.list-blog .blog:hover .link-blog {
+  width: calc(100% - 25px);
+  height: calc(100% - 25px);
+  border-radius: 5px;
+}
+.list-blog .blog .link-blog {
+  text-align: right;
+  display: block;
+  background-color: #55198B;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 10px 15px 15px;
+  border-bottom-left-radius: 100%;
+  width: 15px;
+  height: 20px;
+  transition: all 0.45s ease-out;
+  z-index: 5;
 }
 
 #loader {
@@ -106,7 +150,7 @@ picture.emoji-gif img {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: loader-hide 1s forwards;
+  animation: loader-hide 1.5s forwards;
 }
 #loader .loader {
   border: 16px solid #f3f3f3;
@@ -114,7 +158,26 @@ picture.emoji-gif img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite; /* Animation en boucle, à l'infini */
+}
+
+.competences-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.competences-bars .competence-bar .competence-bar-bar {
+  background-color: #ffffff;
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.competences-bars .competence-bar .competence-bar-bar .competence-bar-bar-fill {
+  background-color: #55198B;
+  height: 100%;
+  border-radius: 10px;
+  animation: showGrowth 1s ease infinite alternate;
 }
 
 .btn {
@@ -265,6 +328,14 @@ picture.emoji-gif img {
     transform: scale(10);
   }
 }
+@keyframes showGrowth {
+  from {
+    padding-right: 0px;
+  }
+  to {
+    padding-left: 1%;
+  }
+}
 .header-website {
   position: sticky;
   top: 0;
@@ -308,7 +379,7 @@ picture.emoji-gif img {
 }
 .header-website .navbar .menu .dropdown-menu .nav-links .nav-link a {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 @media screen and (min-width: 768px) {
   .header-website .navbar .menu .dropdown-menu {
