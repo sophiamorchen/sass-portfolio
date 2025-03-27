@@ -20,5 +20,14 @@ picture.emoji-gif {
     img {
     width: 1em;
     height: 1em;
+    }
 }
+#goToTop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 500;
+
+    
+
 }
