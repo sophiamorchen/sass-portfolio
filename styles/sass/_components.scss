@@ -69,6 +69,28 @@
         }
     }
 }
+.competences-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .competence-bar {
+        .competence-bar-bar {
+            background-color: $white; 
+            width: 100%;
+            height: 30px;
+            border-radius: $border-radius;
+            border: 1px solid;
+            .competence-bar-bar-fill {
+                background-color: $primary;
+                height: 100%;            
+                border-radius: $border-radius;
+                animation: showGrowth 1s ease infinite alternate;
+
+            }
+        }
+    }
+}
+
 .list-blog {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -90,7 +112,7 @@
     .blog{
         box-shadow: 1px 0 20px #fff;
         padding: 15px 30px;
-        border-radius: 5px;
+        border-radius: $border-radius;
         position: relative;
         h4, p {
             position: relative;
@@ -105,13 +127,12 @@
             .link-blog{
                 width: calc(100% - 25px);
                 height: calc(100% - 25px);
-                border-radius: 5px;
+                border-radius: $border-radius;
             }
         }
         .link-blog {
             // par défaut, c'est white, donc pas besoin de passer un parametre. 
             //n'aurait pas été le cas si je n'avais pas précisé white dans la mixin. RTFM)
-          
             text-align: right;
             // on met block pour que ce ne soit plus du texte mais bine un block (toute la ligne!!)
             display: block;
@@ -120,6 +141,7 @@
             top: 0;
             right: 0;
             padding: 10px 10px 15px 15px;
+            border-radius: $border-radius;
             border-bottom-left-radius: 100%;
             width: 15px;
             height: 20px;
@@ -152,24 +174,49 @@
     }
 
 }
-.competences-bars {
+.diplome {
     display: flex;
-    flex-direction: column;
     gap: 30px;
-    .competence-bar {
-        .competence-bar-bar {
-            background-color: $white; 
+    position: relative;
+    padding-bottom: 45px;
+    margin: 30px 0;
+    &:hover {
+        &::after{
             width: 100%;
-            height: 30px;
-            border-radius: 10px;
-            border: 1px solid;
-            .competence-bar-bar-fill {
-                background-color: $primary;
-                height: 100%;            
-                border-radius: 10px;
-                animation: showGrowth 1s ease infinite alternate;
+            background-color: $primary;
 
-            }
         }
     }
-}
+    &::after {
+        content: "" ;
+        width: 60%;
+        height: 2px;
+        background-color: $grey;
+        position: absolute;
+        bottom: 0;
+        transition: all 0.5s ease;
+    }
+    .diplome-logo {
+        max-width: 100px;
+        height: fit-content;
+        border-radius: $border-radius;
+    }
+    .diplome-content {
+        .diplome-title {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+
+        }
+        .diplome-subtitle {
+            font-weight: bold;
+            margin-bottom: 15px;
+            }
+        }
+        .diplome-date {
+            font-style: italic;
+
+        }
+        .diplome-descritpion {
+
+        }
+    }
