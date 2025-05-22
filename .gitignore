@@ -1,0 +1,23 @@
+# Node modules (si tu utilises npm/yarn)
+node_modules/
+
+# Dossiers de sauvegardes de pages web (comme celui qui cause l'erreur)
+*_files/
+*.html.téléchargement
+*.js.téléchargement
+*.css.téléchargement
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs et temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers inutiles dans le dossier img
+img/JavaScript (JS) Cheat Sheet Online_files/
+
+# Si tu utilises un générateur statique
+dist/
+build/

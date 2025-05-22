@@ -236,6 +236,7 @@ picture.emoji-gif img {
 }
 .diplome .diplome-logo {
   max-width: 100px;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
 }
